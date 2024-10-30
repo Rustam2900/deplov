@@ -61,11 +61,14 @@ WSGI_APPLICATION = 'core.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'your_database_name',  # Ma'lumotlar bazasi nomi
+        'USER': 'your_username',        # PostgreSQL foydalanuvchi nomi
+        'PASSWORD': 'your_password',    # Foydalanuvchi paroli
+        'HOST': 'localhost',            # PostgreSQL serverining manzili (localhost)
+        'PORT': '5432',                 # PostgreSQL porti (standart port 5432)
+    }  # bu malumotlar hammasi localda .env faylidan o'qib olinishi kerak
 }
-
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
